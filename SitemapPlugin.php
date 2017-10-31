@@ -80,6 +80,7 @@ class SitemapPlugin extends BasePlugin
                     'changefreq' => $input['changefreq'][$section->id],
                     'priority' => $input['priority'][$section->id],
                     'includeiffield' => $input['includeiffield'][$section->id],
+                    'includeifinvert' => $input['includeifinvert'][$section->id],
                 );
             }
         }

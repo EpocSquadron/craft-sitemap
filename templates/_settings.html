@@ -38,6 +38,7 @@
     <th>{{ 'Section'|t }} </th>
     <th>{{ 'URL Format'|t }}</th>
     <th>{{ 'Include if...'|t }}</th>
+    <th>{{ 'Invert if'|t }}</th>
     <th>{{ 'Entries'|t }}</th>
     <th>{{ 'Change Frequency'|t }}</th>
     <th>{{ 'Priority'|t }}</th>
@@ -67,6 +68,12 @@
             name: "includeiffield[#{section.id}]",
             options: includeIfFieldOptions,
             value: settings.sections[section.id].includeiffield|default("")
+          }) -}}
+        </td>
+        <td>
+          {{- forms.lightswitch({
+            name: "includeifinvert[#{section.id}]",
+            on: settings.sections[section.id].includeifinvert|default(0)
           }) -}}
         </td>
         <td>
